@@ -1,3 +1,6 @@
+//Room 1 = best room
+// Tiffany Wong, Emma Wingreen, Victoria Berkowitz, Stephannia Kabanakis, and Eduardo Leite
+
 import java.io.*;
 import java.util.*;
 
