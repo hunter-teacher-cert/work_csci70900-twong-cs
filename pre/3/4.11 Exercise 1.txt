@@ -1,0 +1,36 @@
+Tiffany Wong
+4.11 Exercise 1
+
+1. When ping() is invoked, a period (".") will be displayed and a new line will be started. 
+When baffle() is invoked, "wug" will be displayed and ping() will be invoked. In other words, 
+"wug." will be displayed and a new line will be started. When zoop() is invoked, baffle() will 
+be invoked, "You wugga " will be displayed, and then baffle() will be invoked again. In other 
+words, "wug. [line break] You wugga wug."
+
+Execution always begins at the first line of main. The output of the program, with line breaks 
+and spacing, is the following:
+
+No, I wug.
+You wugga wug.
+I wug. 
+
+2. Stack diagram showing the state of the program the first time ping() is invoked:
+	_______________________
+main	| print(No, I )	       |
+	|______________________|
+zoop	| print()	       | //nothing is printed	
+	|______________________|
+baffle	| print(wug)	       |
+	|______________________|
+ping	| print(.)	       |
+	|______________________|
+
+3. If baffle() is invoked at the end of the ping method, it will create an infinite loop
+of "wug." being displayed. This is because the baffle method invokes the ping method. Since
+they will invoke each other with no stopping condition, they will run forever. The output
+of the program would be:
+
+wug.
+wug.
+wug.
+... (repeating forever)
