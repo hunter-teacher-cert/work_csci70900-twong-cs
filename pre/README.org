@@ -1,6 +1,6 @@
 * Last name: Wong
 * First name: Tiffany
-* Github username: twong-cs
+* Github username: twong-cs 
 
 * Instructions:
 
