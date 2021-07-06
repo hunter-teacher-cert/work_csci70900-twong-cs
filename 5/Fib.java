@@ -20,11 +20,9 @@ public class Fib {
     //alternate implementation with loop
     int i = 0; //index of current fib term
     int sum = 0; //f(0) = 0
-    int sumPrev = 1; //f(1) = 1
     while(i<n) {
       int temp = sum; // temp variable to store sum of n-2th term
-      sum = sum + sumPrev; //adding n-1 and n-2th term
-      sumPrev = temp; 
+      sum = sum + temp; //adding n-1 and n-2th term
       i++;
     }
     return sum;
