@@ -51,10 +51,14 @@ public class SuperArray
 
     // add item
 	//this.data[this.numberElements] = value;
-    this.data[i] = value;
+    for(int j = this.data.length - 1; j > i; j--){
+		this.data[j] = this.data[j-1];
+	}
 
+	this.data[i] = value;
+	
     // increment numberElements
-	 this.numberElements++;
+	this.numberElements++;
 
   }//end add()
 
@@ -75,12 +79,8 @@ public class SuperArray
 	}
 	
 	//setters - allows modifying instance vars outside of class
-	public void setData(int[] newData) { 
-		this.data = newData;
-	}
-	
-	public void setNumberElements(int newNumberElements){
-		this.numberElements = newNumberElements;
+	public void set(int index, int value) { 
+		this.data[index] = value;
 	}
 	
 	//printing items of int list data
@@ -141,7 +141,7 @@ public class SuperArray
   private void grow()
   {
     // create a new array with extra space
-    int[] newData = new int[this.data.length + 20];
+    int[] newData = new int[this.data.length + 10];
 
     // Q: How did you decide how much to increase capacity by?
     // A: Increasing by arbitrary number 10
@@ -155,8 +155,9 @@ public class SuperArray
     this.data = newData;
 
     // Q: How does this look when illustrated using encapsulation diagram?
-    //A: an empty array is created, information is copied over one by one, and then the old array is aliased to the new array, thus growing it
-    /* A: this.data now makes reference to the new object created/instantiated by newData*/
+    /*A: an empty array is created, information is copied over one by one, and then 
+	the old array is aliased to the new array, thus growing it
+    this.data now makes reference to the new object created/instantiated by newData*/
   }//end grow()
 
 }//end class
