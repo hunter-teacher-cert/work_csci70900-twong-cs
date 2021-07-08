@@ -17,7 +17,7 @@ import java.util.*;
 
 public class SuperArray
 {
-  //instance vars
+  //instance vars/attributes
   private int[] data;           //where the actual data is stored
   private int numberElements;   //number of "meaningful" elements
 
@@ -65,13 +65,22 @@ public class SuperArray
 		this.numberElements--;
 	}
 	
-	//getters
+	//getters - allows access to instance vars outside of class
 	public int[] getData(){
 		return this.data;
 	}
 	
 	public int getNumberElements(){
 		return this.numberElements;
+	}
+	
+	//setters - allows modifying instance vars outside of class
+	public void setData(int[] newData) { 
+		this.data = newData;
+	}
+	
+	public void setNumberElements(int newNumberElements){
+		this.numberElements = newNumberElements;
 	}
 	
 	//printing items of int list data
