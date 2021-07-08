@@ -27,47 +27,37 @@ public class SuperArrayDriver
     for (int i=0; i<15; i++) { //i<15 before
       sa.add(i,i);
     }//for i
-    //System.out.println(sa);
-	
+    System.out.println(sa);
 	
 	
     System.out.println("\nTesting add at index 5, 0 and 17(end)");
     sa.add(5, 100);
+	System.out.println(sa.getNumberElements());
+	
     System.out.println(sa);
     sa.add(0, 100);
+	
+	System.out.println(sa.getNumberElements());
     System.out.println(sa);
     sa.add(17, 100);
-    System.out.println(sa);
 	
 	System.out.println(sa.getNumberElements());
-	System.out.println(sa.toString());
-    /*
+    System.out.println(sa);
+	
+	
     System.out.println("\nTesting remove at 0, 5, and 15 (end)");
     sa.remove(0);
-	
+	System.out.println(sa.getNumberElements());
     System.out.println(sa);
+	
     sa.remove(5);
-
-    System.out.println(sa);
+	System.out.println(sa.getNumberElements());
+	System.out.println(sa);
+	
     sa.remove(15);
-	
 	System.out.println(sa.getNumberElements());
-	System.out.println(sa.toString());
+	System.out.println(sa);
 	
-    System.out.println(sa);
-	
-	System.out.println(sa.getNumberElements());
-	System.out.println(sa.toString());
-	*/
-	int[] x = new int[4];
-	for(int i = 0; i < 4; i++) {
-		x[i]=i;
-	}
-	sa.setData(x);
-	sa.setNumberElements(4);
-	System.out.println(sa.getNumberElements());
-	System.out.println(sa.toString());
-    
 
   }//main
 
