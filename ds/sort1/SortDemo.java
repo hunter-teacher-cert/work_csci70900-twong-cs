@@ -31,22 +31,22 @@ public class SortDemo{
 
     //default
     public SortDemo(){
-	  data = new ArrayList<Integer>();
-	  r = new Random();
-  	for (int i=0;i<15;i++){ //default size of list is 15
-	    data.add(r.nextInt(20)); //picks random num from 0-19
-	}
-
+	     data = new ArrayList<Integer>();
+	     r = new Random();
+  	     for (int i=0;i<15;i++){ //default size of list is 15
+	          data.add(r.nextInt(20)); //picks random num from 0-19
+          }
     }
+
     //constructor with parameter the size will vary depending on user or programmer choice
     public SortDemo(int size){
-	  data = new ArrayList<Integer>();
-	  r = new Random();
-	  for (int i=0;i<size;i++){
-	    data.add(r.nextInt(20)); //picks random num from 0-19
-	}
+	     data = new ArrayList<Integer>();
+	     r = new Random();
+	     for (int i=0;i<size;i++){
+	        data.add(r.nextInt(20)); //picks random num from 0-19
+	     }
 
-    }
+     }
 
     /*
       return the index of the ArrayList data from index start to the end
@@ -55,93 +55,108 @@ public class SortDemo{
       if start was 2 (start at index 2, value 10) then it woudl return 3 which is the index of the value
       6 which is the index with the smallest value from start to end
     */
-    //this method is finding the smallest index based on the parameter index number that we provoid. It will include that index #  and go to the right. It will NOT include any values prior to that index number. 
+    //this method is finding the smallest index based on the parameter index number that we provoid. It will include that index #  and go to the right. It will NOT include any values prior to that index number.
     public int findSmallestIndex(int start){
 	    int smallIndex = start;
       // start a variable at the one after start
-	   
 
 	    // loop from that variable to end and update smallIndex as needed
       for (int i = start+1; i < data.size(); i++){
         if (data.get(smallIndex) < data.get(i)) {
+          //use get method on ArrayList data to retrieve value at that lowerIndex
+          //conditional compares every item to its next
           smallIndex = smallIndex;
+          //if current item is less in value, value at smallIndex is in correct place
         }
         else{
           smallIndex = i;
+          //if current item is greater in value, smallIndex gets next index as value
         }
       }
-  
 	    return smallIndex;
       //if repeats of smallest number occur, will return last instance of smallest number
-
     }// end of findSmallestIndex
 
-  public int get(int index) {
-    // define get()
-    return this.data.get(index);
-  }
+    // define get() method for instances of SortDemo
+    //SortDemo.get(x) should get value of data at index x
+    public int get(int index) {
+      return this.data.get(index);
+    } //end get
 
-  public void sort(){
-  	int smallestIndex;
-    
-	  for (int j=0;j < data.size()-1; j++){
-	    // find the smallet index from i to end
-	    // your code here
-      smallestIndex = findSmallestIndex(j);
-      int valSmallIndex = data.get(smallestIndex);
-      data.set(smallestIndex, data.get(j));
-      data.set(j, valSmallIndex);
-	    // swap the item at that index and i
-	    // your code here
-      
-      }
-
-  }
+    //method to sort
+    public void sort(){
+  	   int smallestIndex;
+	     for (int i = 0; i < data.size(); i++){
+          smallestIndex = findSmallestIndex(i);
+          //find smallest index from current value of i to end of list
+          int valSmallIndex = data.get(smallestIndex);
+          //valSmallIndex gets value at smallestIndex
+          data.set(smallestIndex, data.get(i));
+          data.set(i, valSmallIndex);
+	        // swap the item at that index and i
+        } //end for loop
+    } //end sort
 
 
-    /* If you finish the lab early you can get started on this */
+    // linear search for value in data
     public int linearSearch(int value){
-	// loop through the ArrayList data
-	// and if the value you're searchign for is in the ArrayList, return it.
-	// return -1 if it isn't there.
-
-
-	return 0; // replace this return
+	  // loop through the ArrayList data
+      for (int i = 0; i < data.size(); i++){
+        if(data.get(i) == value) {
+          return i; //returns index of first instance of value found
+        }
+       }
+        return -1; // returns -1 if value is not found
     }
 
-    /* If you finish the lab early you can get started on this */
+    // binary search for value in data
     public int binarySearch(int value){
-	boolean replacethiswithrealexpression=false;
-	int lowerIndex = 0;
-	int upperIndex = data.size();
-	int middleIndex = data.size()/2;
 
-	/* if upper crosses lower it's not there and the lop should exit the loop
+      int lowerIndex = 0;
+      int upperIndex = data.size() - 1;
+      int middleIndex = data.size()/2; //rounds down if odd number of elements
+      boolean loop = lowerIndex < upperIndex;
+	/* if upper crosses lower it's not there and the loop should exit the loop
 	   and if the item is at middle you should exit the loop
 
-           you have to replace the "replacethiswithrealexpression" boolean
-           with a correct expression based on lowerIndex and upperIndex
 	*/
-	while (replacethiswithrealexpression)
-	    {
-		// update lower and upper.
+      while (loop) {
+
+        System.out.println("middleIndex is " + middleIndex);
+        System.out.println("upperIndex is " + upperIndex);
+        System.out.println("lowerIndex is " + lowerIndex);
 		// remember if value is less than data.get(middleIndex) you want to search next time
+        if(value < data.get(middleIndex)){
+          upperIndex = middleIndex;
+        }
+
+        if(value > data.get(middleIndex)){
+          lowerIndex = middleIndex;
+        }
+
+        if(value == data.get(middleIndex)){
+          System.out.println("found");
+          return middleIndex;
+        }
+
 		// from lower to the middle and otherwise from the middle to the upper.
 		//
 		// then update middleIndex based on new lowerIndex and upperIndex.
-
-	    }
+    middleIndex = (lowerIndex + upperIndex)/2;
+    loop = lowerIndex < upperIndex;
+    //upper and lower index will never cross bc middleIndex will always be the floor of avg
+    } //end while loop
 
 	/* replace this return to either return the value if it was found and -1
 	   if upperIndex and lowerIndex crossed
 	*/
-
-	return 0; // replace this return
-    }
+     System.out.println("not found");
+	   return -1; // replace this return
+  } //end binarySearch
 
 
     public String toString(){
-	return ""+data;
+	     return ""+data;
     };
 
 }
