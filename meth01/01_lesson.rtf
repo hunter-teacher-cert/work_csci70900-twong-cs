@@ -1,77 +1,43 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2580
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
-{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
-{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
-{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
-\margl1440\margr1440\vieww14080\viewh14680\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+Lesson Objective:
+SWBAT evaluate and build compound Boolean expressions that meet a goal
+	•	Students understand Booleans as a primitive data type and can have true or false values
+	•	Students know how to write value methods in Java
 
-\f0\b\fs24 \cf0 Lesson Objective:
-\f1\b0 \
-SWBAT evaluate and build compound Boolean expressions that meet a goal\
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}Students understand Booleans as a primitive data type and can have true or false values\
-{\listtext	\uc0\u8226 	}Students know how to write value methods in Java\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-\
 
-\f0\b Aim: 
-\f1\b0 How can we write methods with compound Boolean expressions?\
-\
+Aim: How can we write methods with compound Boolean expressions?
 
-\f0\b Warm Up (7 minutes):
-\f1\b0 \
-Elicit OR and AND Boolean logic with Sit Down/Stand Up game.\
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \ul \ulc0 Rules of the game:\ulnone \
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}Sitting down == FALSE, standing up == TRUE\
-{\listtext	\uc0\u8226 	}Everyone starts sitting down (Boolean default value is false)\
-{\listtext	\uc0\u8226 	}If the prompt is true as it pertains to you, stand up. If it\'92s false for you, sit down.\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-Some sample prompts:\
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls3\ilvl0\cf0 {\listtext	1.	}I am wearing blue jeans.\
-{\listtext	2.	}I am not wearing blue jeans.\
-{\listtext	3.	}I am wearing blue jeans and eyeglasses.\
-{\listtext	4.	}I am wearing blue jeans or eyeglasses.\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-Encourage students to write down rules for Boolean logic. Build a set of rules together as a class and verify student understanding.\
-\
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+Warm Up (7 minutes):
+Elicit OR and AND Boolean logic with Sit Down/Stand Up game.
 
-\f0\b \cf0 Activity (23 minutes):
-\f1\b0 \
-Students will engage in pair programming (driver-navigator model) to create value methods that will:\
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls4\ilvl0\cf0 {\listtext	\uc0\u8226 	}Check if a number is greater than or equal to another\
-{\listtext	\uc0\u8226 	}Check if a number is between two numbers\
-{\listtext	\uc0\u8226 	}Check if three numbers will form a triangle\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-Encourage students to explore alternate Boolean solutions. For example, isTriangle(a,b,c) can return true if (a + b > c && b + c > a && a + c > b) and false otherwise; or false if (a >= b + c || b >= a + c || c >= a + b) and true otherwise. Students can also vary conditional statements used (series of if statements, if/else, etc.).\
-\
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+Rules of the game:
+	•	Sitting down == FALSE, standing up == TRUE
+	•	Everyone starts sitting down (Boolean default value is false)
+	•	If the prompt is true as it pertains to you, stand up. If it’s false for you, sit down.
 
-\f0\b \cf0 Closing (15 minutes):\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+Some sample prompts:
+	1.	I am wearing blue jeans.
+	2.	I am not wearing blue jeans.
+	3.	I am wearing blue jeans and eyeglasses.
+	4.	I am wearing blue jeans or eyeglasses.
 
-\f1\b0 \cf0 Part 1:\
-Students will leave code up on their driver stations for others to leave feedback. Swap with neighboring pair to examine and analyze their code. State glows and grows.\
-\
-Part 2:\
-Take student volunteers to put forth a solution they want to share. Encourage students to talk about their development process - what bugs they ran into and how they overcame them. Invite QCCs from class.\
-\
-\
-\
-}
+Encourage students to write down rules for Boolean logic. Build a set of rules together as a class and verify student understanding.
+
+
+Activity (23 minutes):
+Students will engage in pair programming (driver-navigator model) to create value methods that will:
+	•	Check if a number is greater than or equal to another
+	•	Check if a number is between two numbers
+	•	Check if three numbers will form a triangle
+
+Encourage students to explore alternate Boolean solutions. For example, isTriangle(a,b,c) can return true if (a + b > c && b + c > a && a + c > b) and false otherwise; or false if (a >= b + c || b >= a + c || c >= a + b) and true otherwise. Students can also vary conditional statements used (series of if statements, if/else, etc.).
+
+
+Closing (15 minutes):
+Part 1:
+Students will leave code up on their driver stations for others to leave feedback. Swap with neighboring pair to examine and analyze their code. State glows and grows.
+
+Part 2:
+Take student volunteers to put forth a solution they want to share. Encourage students to talk about their development process - what bugs they ran into and how they overcame them. Invite QCCs from class.
+
+
+
