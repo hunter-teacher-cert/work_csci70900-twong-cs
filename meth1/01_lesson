@@ -1,0 +1,44 @@
+Lesson Objective:
+SWBAT evaluate and build compound Boolean expressions that meet a goal
+ï Students understand Booleans as a primitive data type and can have true or false values
+ï Students know how to write value methods in Java
+
+
+Aim: How can we write methods with compound Boolean expressions?
+
+Warm Up (7 minutes):
+Elicit OR and AND Boolean logic with Sit Down/Stand Up game.
+
+Rules of the game:
+ï Sitting down == FALSE, standing up == TRUE
+ï Everyone starts sitting down (Boolean default value is false)
+ï If the prompt is true as it pertains to you, stand up. If it is false for you, sit down.
+
+Some sample prompts:
+1. I am wearing blue jeans.
+2. I am not wearing blue jeans.
+3. I am wearing blue jeans and eyeglasses.
+4. I am wearing blue jeans or eyeglasses.
+
+Encourage students to write down rules for Boolean logic. Build a set of rules together as a class and verify student understanding.
+
+
+Activity (23 minutes):
+Students will engage in pair programming (driver-navigator model) to create value methods that will:
+ï Check if a number is greater than or equal to another
+ï Check if a number is between two numbers
+ï Check if three numbers will form a triangle
+
+Encourage students to explore alternate Boolean solutions. For example, isTriangle(a,b,c) can return true if (a + b > c && b + c > a && a + c > b) and false otherwise; or false if (a >= b + c || b >= a + c || c >= a + b) and true otherwise. Students can also vary conditional statements used (series of if statements, if/else, etc.).
+
+
+Closing (15 minutes):
+Part 1:
+Students will leave code up on their driver stations for others to leave feedback. Swap with neighboring pair to examine and analyze their code. State glows and grows.
+
+Part 2:
+Take student volunteers to put forth a solution they want to share. Encourage students to talk about their development process - what bugs they ran into and how they overcame them. Invite QCCs from class.
+
+
+
+
