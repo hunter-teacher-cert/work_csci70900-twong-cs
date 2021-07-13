@@ -80,13 +80,14 @@ public class Knights{
 	   boolean solved = false;
      count++;
 
+
   	// This should return true when we've solved the problem
   	// What should CHANGETHIS be?
   	// in the maze we knew we were done when we found the exit
   	// here, when do we know when we're done?
   	// HINT: you have an nxn board and are done when you've visited
   	// every board location
-  	if (count > col * row){
+  	if (count > rows * cols){
   	    System.out.println(this);
   	    return true; //Visited all spots on the board
   	}
@@ -96,15 +97,16 @@ public class Knights{
   	// change CHANGETHIS to the appropriate boolean
   	// HINT: we are tracking our moves in the board
   	// and also built that border of -1 values.
-  	if (board[col][row] == -1){
+  	if (board[col][row] == -1 || board[col][row] > 0){
 
-  	    return false; //Tried to visit a spot out of bounds
+  	    return false; //Tried to visit a spot out of bounds or visited a space before
   	}
 
 
 	// what do we put into the board
   	// Change CHANGETHIS
   	board[col][row] = count;
+
 
     delay(50);
   	System.out.println(clearScreen+this);
