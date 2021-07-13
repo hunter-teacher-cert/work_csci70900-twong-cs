@@ -1,0 +1,48 @@
+//What libraries do we need?
+import java.io.*;
+import java.util.*;
+
+//What do we want GuessMyNumber to do?
+public class GuessMyNumber {
+
+  public static void main(String[] args) {
+
+    //Why do we need an integer variable named guess?
+    //Why do we need an integer varaible named diference?
+    //Why don't we need to give them initial values?
+    int guess;
+    int difference;
+
+    //Why is line 17 necessary? What does it do?
+    Random random = new Random();
+
+    //Why do we add 1 to random.nextInt(100)? Ask for predictions.
+    int number = random.nextInt(100) + 1;
+
+    //Why is line 23 necessary? What does it do?
+    Scanner in = new Scanner(System.in);
+
+    //Why do we invoke nextInt() in line 28?
+    System.out.print("I'm thinking a number between 1 and 100, inclusive. ");
+    System.out.println("Can you guess what it is?");
+    System.out.print("Type a number: ");
+    guess = in.nextInt();
+
+    //What is the purpose of lines 35-39? Why do we need the "else"?
+    //How else can this conditional be written? Live code alternate solutions.
+    //What is the difference between using an if-else and using multiple if statements?
+    //What happens is guess = number? Ask for predictions.
+    if (guess > number) {
+      difference = guess - number;
+    } else {
+      difference = number - guess;
+    }
+
+    //What does + do in lines 40-43?
+    //Why are some parts of println in quotes and some aren't?
+    System.out.println("Your guess is: " + guess);
+    System.out.println("The number I was thinking of is: " + number);
+    System.out.println("You were off by: " + difference);
+
+  }
+}
