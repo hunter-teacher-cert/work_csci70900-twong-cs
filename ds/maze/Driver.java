@@ -5,10 +5,10 @@ public class Driver{
 
     public static void main(String[] args) {
 	  boolean solved;
-	/*
+
 	  Maze m = new Maze("maze.dat");
-	solved = m.solve(1,1);
-	*/
+	  solved = m.solve(1,1);
+
 	/*
 	  Knights k - new Knights(5);
 	  solved = k.solve(1,1);
