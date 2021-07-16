@@ -166,7 +166,7 @@ public class Llist{
 
      while (currentNode != null){
 
-      if (currentNode.getValue() == key) { //if we find the key value...
+      if (currentNode.getData() == key) { //if we find the key value...
         return index; //return the index
        }//end if
 
