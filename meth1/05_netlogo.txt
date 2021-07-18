@@ -1,0 +1,41 @@
+
+SWBAT create turtles and write simple commands.
+
+Aim: How can we alter turtle appearance and behavior in Netlogo?
+
+Activity:
+1. Explore what the commands "create-turtles 1," "create-turtles 4," and "clear-all" do.\
+2. Upon inspecting turtles, change their color, heading (orientation), xcor, ycor, pen down, etc.\
+3. Explore the following code (given without comments) - change values and colors. Insert comments with what each command does.
+
+to setup
+  clear-all
+  crt 3                           ;; make 3 turtles
+  ask turtle 0                    ;; tell the first one...
+    [ fd 1 ]                      ;; ...to go forward
+  ask turtle 1                    ;; tell the second one...
+    [ set color green ]           ;; ...to become green
+  ask turtle 2                    ;; tell the third one...
+    [ rt 90 ]                     ;; ...to turn right
+end
+
+4. Now, explore the following code without comments, and insert comments on what each command does. (Do not worry about code concerning ticks - to be discussed later.)
+
+to setup
+  clear-all
+  create-turtles 10
+  reset-ticks
+end
+
+to go
+  ask turtles [
+    fd 1            ;; forward 1 step
+    rt random 10    ;; turn right
+    lt random 10    ;; turn left
+  ]
+  tick
+end
+
+5. Compare and contrast the two code segments. What lines of code do the same thing? Did the turtles behave how you expected them to?
+
+6. Create simple program that meets goals outlined with number of turtles and how they behave.
