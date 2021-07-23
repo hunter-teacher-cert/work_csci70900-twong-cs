@@ -115,7 +115,7 @@ public int calcMode(){ //create integer method called calcMode
 
   int currentCount;//currentCount is the frequency of the current element. - This stores the currrent frequency
 
-  ArrayList helperArrayList=new ArrayList<Integer>(inputData.size());
+  /*ArrayList helperArrayList=new ArrayList<Integer>(inputData.size());
 
   for (int i=0;i<helperArrayList.size();i++)
   {
@@ -123,7 +123,7 @@ public int calcMode(){ //create integer method called calcMode
     helperArrayList.set(i)=-1;
 
   }
-  /*
+
   0 0 0 0 0 0
   0 1 2 3 4 5
   */
@@ -131,7 +131,7 @@ public int calcMode(){ //create integer method called calcMode
 
     //check to avoid unnecessary processing
 
-    if (inputData.get(i)<1)
+    //if (inputData.get(i)<1)
     currentCount = frequency(inputData.get(i));//Set currentCount to the frequency of the ith element in the ArrayList.
     if (currentCount > freqMode){//Compares frequency of current element to freqMode
       //if frequency of current element is greater than freqMode, then:
