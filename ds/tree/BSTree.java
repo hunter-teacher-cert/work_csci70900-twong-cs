@@ -86,15 +86,16 @@ public class BSTree {
       System.out.println("temp: " + temp.getData());
       System.out.println("trailer: " + trailer.getData());
       //then connect the trailer to the new front Node
-      if(front.getData() < front.getData()){ //if key is to the left of trailer
+      if(front.getData() < temp.getData()){ //if key is to the left of trailer
         System.out.println("IF");
         //temp.setData(front.getData());
         front.setRight(trailer.getLeft().getRight());
-        //if(front.getLeft().getLeft() != null){
+        if(front.getLeft().getLeft() != null){
         //System.out.println("front is: " + front.getData());
         //delete(front.getData());
-        if(trailer.getLeft().getLeft().getLeft() != null){ //if front has left node AKA if it has grandchildren
+        //if(trailer.getLeft().getLeft().getLeft() != null){ //if front has left node
           front.setLeft(trailer.getLeft().getLeft()); //copy over left subtree of front
+          System.out.println(front.getLeft().getData());
           //delete(front.getLeft().getRight());
           front.getLeft().setRight(null); //delete copy of itself
           System.out.println("something has been deleted");
