@@ -10,12 +10,11 @@ public class DLlist{
   } //constructor
 
   public String toString(){
-  	Node currentNode, prevNode;
+  	Node currentNode;
   	currentNode = front;
   	String result = "";
   	while (currentNode != null){
 	    result = result + currentNode + " <-> "; //concatenate next node
-      prevNode = currentNode.getPrev();
       //System.out.println("currentNode is "+currentNode);
       //System.out.println("prevNode is "+prevNode);
 	    currentNode = currentNode.getNext(); //traverse to the next node
@@ -24,6 +23,25 @@ public class DLlist{
   	result = result + "null";
   	return result;
   } //end toString
+
+  public String printBackwards(){
+    Node currentNode, prevNode;
+  	currentNode = front;
+    prevNode = null;
+  	String result = "";
+    while (currentNode != null){
+      prevNode = currentNode;
+      currentNode = currentNode.getNext(); //traverse to the next node
+    } //end while
+
+    while (prevNode != null){
+      result = result + prevNode + " <-> "; //concatenate previous node
+      prevNode = prevNode.getPrev(); //traverse to the next node
+    } //end while
+
+    result = result + "null";
+    return result; //if list is empty, it should return null
+  }
 
   public void add(String data){
     Node n = new Node(data); //create new node that stores input
@@ -120,7 +138,7 @@ public class DLlist{
       counter++; //increment counter
       //System.out.println("counter is: " + counter);
 
-      currentNode = currentNode.getNext(); //traverse to the next node
+      //currentNode = currentNode.getNext(); //traverse to the next node
     }//end while
   }// end of insert
 
